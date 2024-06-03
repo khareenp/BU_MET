@@ -1,9 +1,12 @@
 "use strict";
+// Class for Rainy Country implementing ICountry
 class RainCountry {
+    // Constructor to initialize name and rainLevel
     constructor(name, rainLevel) {
         this.name = name;
         this.rainLevel = rainLevel;
     }
+    // Method to return country info as a table and text
     getInfo(element) {
         element.innerHTML = `
             <table class="project-table">
@@ -15,11 +18,14 @@ class RainCountry {
         return element;
     }
 }
+// Class for Snowy Country implementing ICountry
 class SnowyCountry {
+    // Constructor to initialize name and snowLevel
     constructor(name, snowLevel) {
         this.name = name;
         this.snowLevel = snowLevel;
     }
+    // Method to return country info as a table and text
     getInfo(element) {
         element.innerHTML = `
             <table class="project-table">
@@ -31,11 +37,14 @@ class SnowyCountry {
         return element;
     }
 }
+// Class for Island Country implementing ICountry
 class IslandCountry {
+    // Constructor to initialize name and landSize
     constructor(name, landSize) {
         this.name = name;
         this.landSize = landSize;
     }
+    // Method to return country info as a table and text
     getInfo(element) {
         element.innerHTML = `
             <table class="project-table">
@@ -47,7 +56,7 @@ class IslandCountry {
         return element;
     }
 }
-// Sample data
+// Sample data array of various country objects
 const countries = [
     new RainCountry("United States", 28),
     new SnowyCountry("Norway", 20),
@@ -60,12 +69,13 @@ const countries = [
 const snowyCountriesList = [];
 // Function to filter snowy countries
 function filterSnowyCountry(country) {
+    // Check if the country has a snowLevel property
     if (country.snowLevel !== undefined) {
         return country;
     }
     return null;
 }
-// Build the snowyCountriesList
+// Build the snowyCountriesList by filtering snowy countries
 countries.forEach(country => {
     const snowyCountry = filterSnowyCountry(country);
     if (snowyCountry) {
@@ -74,6 +84,7 @@ countries.forEach(country => {
 });
 // Function to render country information
 function renderCountries() {
+    // Get the container elements for all countries and snowy countries
     const allCountriesDiv = document.querySelector('#all-countries .grid');
     const snowyCountriesDiv = document.querySelector('#snowy-countries .grid');
     if (allCountriesDiv && snowyCountriesDiv) {
@@ -98,5 +109,5 @@ function renderCountries() {
         snowyCountriesDiv.appendChild(totalSnowLevelElement);
     }
 }
-// Call the render function
+// Call the render function to display the countries on page load
 renderCountries();

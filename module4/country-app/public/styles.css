@@ -1,0 +1,87 @@
+/* Reset basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  h1 {
+    text-align: center;
+    color: #1e3a8a; /* Dark blue */
+    margin-bottom: 20px;
+  }
+  
+  /* Container styles */
+  .country-container {
+    margin-bottom: 40px;
+  }
+  
+  .country-container h2 {
+    color: #1e3a8a; /* Dark blue */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Project card styles */
+  .project {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  
+  
+  .project-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 1px solid #1e3a8a; /* Dark blue border */
+  }
+  
+  .project-table td {
+    padding: 8px;
+    border: 1px solid #1e3a8a; /* Dark blue border */
+  }
+  
+  .project-text {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    color: #1e3a8a; /* Dark blue */
+  }
+  
+  
+  /* Color palette */
+  :root {
+    --light-blue: #add8e6;
+    --gold: #ffd700;
+    --dark-blue: #1e3a8a;
+    --dark-gold: #b8860b;
+    --white: #ffffff;
+    --light-gray: #f0f0f0;
+  }
+  
